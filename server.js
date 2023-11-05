@@ -32,6 +32,6 @@ mongoose
     console.log(err);
   });
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
-});
+  app.listen(port, "0.0.0.0", function () {
+    console.log(`listening on port ${port}`);
+  });
