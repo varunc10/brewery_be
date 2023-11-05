@@ -1,6 +1,6 @@
 const axios = require("axios");
 const User = require("../models/user");
-const Review = require("../models/rating");
+const Review = require("../models/review");
 
 exports.brewerySearch = async (req, res) => {
   const searchType = req.query.searchType;

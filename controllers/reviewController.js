@@ -1,6 +1,6 @@
 const axios = require("axios");
 const User = require("../models/user");
-const Review = require("../models/rating");
+const Review = require("../models/review");
 
 exports.findReviewsById = async (req, res) => {
   const { id } = req.params;
@@ -16,11 +16,12 @@ exports.findReviewsById = async (req, res) => {
 
 exports.postReviews = async (req, res) => {
   const { id } = req.params;
-  const { rating, description } = req.body;
+  const { rating, description, username } = req.body;
 
   try {
     const newReview = new Review({
       id,
+      username,
       rating,
       description,
     });

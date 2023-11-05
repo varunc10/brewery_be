@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const User = require("./models/user");
-const Review = require("./models/rating");
+const Review = require("./models/review");
 const cors = require("cors");
 require("dotenv").config();
 const bcrypt = require("bcrypt");
